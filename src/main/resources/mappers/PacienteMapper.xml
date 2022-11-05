@@ -22,7 +22,18 @@
             PACIENTES as p
     </select>
 
-    <select id="">
+    <select id="ObtenerPacienteID" resultMap="PacienteResult" parameterType="Map" >
+        SELECT
+            p.id,
+            p.tipo_id,
+            p.fecha_nacimiento,
+            p.nombre
+        FROM
+            PACIENTES as p
+        WHERE
+            p.tipo_id = tipo_id
+        AND
+            p.id = id
 
     </select>
 </mapper>
